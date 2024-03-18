@@ -9,10 +9,106 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Please choose a language from the list below"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099" />
+
+    <EditText
+        android:id="@+id/edittextresult"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="192dp"
+        android:layout_height="299dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.305">
+
+        <RadioButton
+            android:id="@+id/radiospanish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spanish"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radiofrench"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="French"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571" />
+
+        <RadioButton
+            android:id="@+id/radiochinese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chinese"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571" />
+
+        <RadioButton
+            android:id="@+id/radioitalian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Italian"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571" />
+
+        <RadioButton
+            android:id="@+id/radioarabic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arabic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571" />
+
+        <RadioButton
+            android:id="@+id/radiohindi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hindi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571" />
+
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
