@@ -39,20 +39,20 @@
         app:layout_constraintVertical_bias="0.305">
 
         <RadioButton
-            android:id="@+id/radiospanish"
+            android:id="@+id/radiorussian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Spanish"
+            android:text="Russian"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radiofrench"
+            android:id="@+id/radioturkish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="French"
+            android:text="Turkey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
