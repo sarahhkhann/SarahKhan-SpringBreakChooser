@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private var last_x: Float = 0.0f
     private var last_y: Float = 0.0f
     private var last_z: Float = 0.0f
-    private val SHAKE_THRESHOLD = 800
+    private val SHAKE_THRESHOLD = 200
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
