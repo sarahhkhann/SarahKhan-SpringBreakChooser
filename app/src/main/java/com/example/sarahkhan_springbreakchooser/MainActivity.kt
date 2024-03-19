@@ -7,9 +7,11 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.speech.RecognizerIntent
+import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.widget.EditText
 import android.widget.RadioGroup
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private var selectedLanguage = "en-US"
     private lateinit var sensorManager: SensorManager
     private var shakeDetector: ShakeDetector? = null
-
+    private var media: MediaPlayer? = null
     private var accelerometer: Sensor? = null
     private var lastUpdate: Long = 0
     private var last_x: Float = 0.0f
@@ -65,6 +67,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             val toast = Toast.makeText(this, text, duration)
             toast.show()
         }
+
+
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
@@ -148,11 +152,30 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
         try {
             startActivity(mapIntent)
+            languageGreeting(selectedLanguage)
         } catch (e: ActivityNotFoundException) {
             Toast.makeText(this, "Google Maps not found", Toast.LENGTH_LONG).show()
         }
     }
 
+    private fun languageGreeting(language: String?) {
+        val greetingResId = when (language) {
+            "ar-SA" -> R.raw.arabic
+            "ru-RU" -> R.raw.russian
+            "tr-TR" -> R.raw.turkish
+            "zh-CN" -> R.raw.chinese
+            "it-IT" -> R.raw.italian
+            "hi-IN" -> R.raw.hindi
+            else -> null
+        }
+
+        greetingResId?.let {
+            media = MediaPlayer.create(this, it).apply {
+                start()
+                setOnCompletionListener { mp -> mp.release() }
+            }
+        }
+    }
 
 }
 
